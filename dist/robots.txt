@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: https://dropcutdone.fancyloon6.chatgpt.site/sitemap.xml

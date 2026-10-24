@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Free Background Remover & Product Photo Cutouts | DropCutDone</title>
+  <meta name="description" content="Drop a photo, remove its background, and download a transparent PNG or a clean white product photo. Free beta. No account. Your photos stay on your device.">
+  <meta name="theme-color" content="#f6f4ee">
+  <link rel="canonical" href="https://dropcutdone.fancyloon6.chatgpt.site/">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/styles.css">
+  <meta property="og:title" content="Drop. Cut. Done. — DropCutDone">
+  <meta property="og:description" content="Less editing. More listing. Remove photo backgrounds right in your browser.">
+  <meta property="og:type" content="website">
+  <script type="module" src="/app.js"></script>
+</head>
+<body>
+  <a class="skip" href="#remover">Skip to background remover</a>
+  <header class="header wrap">
+    <a class="brand" href="/" aria-label="DropCutDone home"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M2 2h28v28H2z" fill="currentColor"/><path d="m10 25 12-18M17 25l5-8" stroke="#ff6538" stroke-width="4"/></svg>dropcutdone<span class="brand-dot">/</span></a>
+    <nav aria-label="Main navigation"><a href="#how-it-works">How it works</a><a href="#questions">FAQs</a><span class="beta"><i></i> Free beta</span></nav>
+  </header>
+  <main>
+    <section class="hero wrap" id="remover">
+      <div class="hero-copy">
+        <p class="eyebrow"><span>01 / THE BACKGROUND REMOVER</span><span class="little-arrow">↘</span></p>
+        <h1>Drop.<br>Cut.<br><span>Done.</span></h1>
+        <p class="hero-description">Good product. Bad background?<br>Let’s get it ready for its close-up.</p>
+        <div class="dropzone" id="dropzone">
+          <input id="files" type="file" accept="image/jpeg,image/png,image/webp" multiple aria-label="Choose photos to remove their backgrounds">
+          <label class="primary upload" for="files"><span>Drop your photos</span><span aria-hidden="true">↗</span></label>
+          <p>or click to browse · JPG, PNG, WebP</p>
+          <p class="fine">Up to 10 photos · 12 MB each · 16 megapixels</p>
+        </div>
+        <div class="promises"><span>✓ No account</span><span>✓ No watermark</span><span>✓ On your device</span></div>
+      </div>
+      <div class="hero-visual">
+        <div class="photo-heading"><span>LESS EDITING. MORE LISTING.</span><span>↙</span></div>
+        <div class="sample-frame"><img src="/assets/sample-shoe.jpg" alt="Red athletic shoe against a red background, a sample photo you can try" width="1200" height="800" fetchpriority="high"><span class="photo-tag">THE BEFORE</span><div class="corner tl"></div><div class="corner tr"></div><div class="corner bl"></div><div class="corner br"></div></div>
+        <div class="sample-bottom"><p>A clean cut.<br>A fresh start.</p><button class="sample-button" id="sample">Try this photo <span aria-hidden="true">↗</span></button></div>
+        <p class="sample-note">Try the real remover with our sample. No upload needed.</p>
+      </div>
+    </section>
+    <div class="wrap"><p id="notice" class="notice" role="status" aria-live="polite" hidden></p></div>
+    <section class="workbench wrap" id="workbench" aria-labelledby="workbench-title" hidden>
+      <div class="section-top"><div><p class="eyebrow">02 / YOUR CUTOUTS</p><h2 id="workbench-title">Ready for the next step.</h2></div><button id="clear" class="text-button">Clear photos ×</button></div>
+      <div class="toolbar">
+        <fieldset><legend>Background</legend><div class="segmented"><button data-bg="transparent" class="selected" aria-pressed="true"><span class="swatch checker"></span>Transparent</button><button data-bg="white" aria-pressed="false"><span class="swatch white"></span>White</button></div></fieldset>
+        <label class="size-label" for="size">Canvas<select id="size" aria-label="Canvas"><option value="original">Original proportions</option><option value="square">Square · 1080 × 1080</option><option value="portrait">Portrait · 1080 × 1350</option></select></label>
+        <button id="download-all" class="dark-button" disabled>Download all (.zip) <span>↓</span></button>
+      </div>
+      <p id="zip-ready" class="notice" hidden>Your ZIP is ready. <a id="zip-link" download="dropcutdone-photos.zip">Save ZIP ↓</a></p>
+      <p class="workbench-note">Check the edges before using your photo. Fine hair, glass, and busy scenes can need a different shot. Large photos export at a maximum of 4096 px on the longest side.</p>
+      <div id="results" class="results"></div>
+    </section>
+    <section class="how wrap" id="how-it-works">
+      <div class="section-top"><p class="eyebrow">A LITTLE LESS BUSYWORK</p><h2>From camera roll<br>to ready to go.</h2></div>
+      <div class="steps">
+        <article><span class="step-number">01</span><h3>Drop it in.</h3><p>One photo or a small batch. Choose a clear shot with your product in focus.</p></article>
+        <article><span class="step-number">02</span><h3>Cut the clutter.</h3><p>The background is removed on your device. Pick transparent or white, then choose your canvas.</p></article>
+        <article><span class="step-number">03</span><h3>Make your move.</h3><p>Download a PNG or grab the whole batch as a ZIP. No sign-up detour. No watermark.</p></article>
+      </div>
+    </section>
+    <section class="privacy-strip"><div class="wrap"><span class="privacy-mark" aria-hidden="true">↳</span><h2>Your photos.<br>Your device.</h2><p>Your images never leave this browser.<br>The cutting engine downloads once, then works locally. Your first cut may take a little longer.</p></div></section>
+    <section class="faq wrap" id="questions"><div><p class="eyebrow">GOOD QUESTIONS</p><h2>Before you drop.</h2></div><div class="faq-list">
+      <details><summary>Is it actually free?</summary><p>Yes. The beta is free, including downloads and small batches. You don’t need an account or a payment card. There are no paid plans in this version.</p></details>
+      <details><summary>What happens to my photos?</summary><p>Your photos are processed in browser memory and aren’t uploaded to us. Clearing your photos or closing the tab removes the working copies. The browser may cache the cutting engine, but we don’t save your photos in that cache. Downloaded files stay wherever you save them.</p></details>
+      <details><summary>Will it work on every photo?</summary><p>It works best with a distinct subject against a simple background. Fine hair, transparent materials, overlapping objects, and low contrast can be difficult. Always preview the result. This beta uses a lightweight model so it can run on your own device.</p></details>
+      <details><summary>What can I download?</summary><p>PNG files with transparent or white backgrounds. Keep the original proportions (up to 4096 px on the longest side), or center your cutout on a 1080 × 1080 square or a 1080 × 1350 portrait canvas. Batch downloads contain a separate PNG for each successful cutout.</p></details>
+      <details><summary>Why does the first photo take longer?</summary><p>Your browser first downloads the image-processing engine and a roughly 4.6 MB model. Processing speed depends on your device. Keep this tab open while it works. If loading fails, check your connection and use Retry.</p></details>
+    </div></section>
+  </main>
+  <footer class="wrap footer"><a class="brand" href="/">dropcutdone<span class="brand-dot">/</span></a><span>LESS BACKGROUND. MORE PRODUCT.</span><div><a href="/privacy.html">Privacy</a><a href="/credits.html">Credits</a><a href="https://github.com/terrorproforma/dropcutdone/issues" target="_blank" rel="noopener noreferrer">Report an issue ↗</a></div></footer>
+</body>
+</html>
